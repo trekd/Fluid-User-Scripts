@@ -14,8 +14,9 @@
 
 			getOpenIssueCount: function(num){
 				num = num || 0;
-				var match = document.getElementsByTagName("small")[num].firstChild.data.match(/\(Displaying ([0-9]+) of ([0-9]+)\)/)[2];
-				return match ? match[0] : 0;
+				var match = document.getElementsByTagName("small")[num].firstChild.data
+									.match(/\(Displaying ([0-9]+) of ([0-9]+)\)/)[2];
+				return match ? match : 0;
 			},
 			
 			getIssuesAssignedCount: function(){
